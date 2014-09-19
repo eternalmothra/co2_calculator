@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Carbon dioxide savings!</h1>
+
+<p>This calculator shows how much carbon dioxide you save by riding instead of driving!</p>
+<p id="demo1">Miles traveled:</td>
+<input id="numb" type="text">
+<p id="demo2">Your car's mpg:</td>
+<input id="numb2" type="text">
+<p id="demo3">Gallons gas: </td>
+<p id="demo"></p>
+<p id="demo4">You saved: </p>
+<p id="demo5"> </p>
+
+<button type="button" onclick="myFunction()">Submit</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+/*miles and mpg are used to figure out gallons. mpge is the equivalent mpg you get if you are riding a bike, and you can get equivalent gallons from it.*/
+
+    var miles,mpg,gallons;
+    var mpge, co2saved;
+    mpge = 1800;
+
+    miles = Number(document.getElementById("numb").value); 
+    mpg = Number(document.getElementById("numb2").value);
+    gallons = Math.round(miles/mpg*100)/100
+    gallonse = miles/mpge;
+    
+    co2saved = Math.round((gallons-gallonse)*19.64*100)/100
+
+document.getElementById("demo3").innerHTML = "Gallons gas: "+gallons+ " gallons" ;
+
+document.getElementById("demo4").innerHTML = "You saved: " +co2saved + " lbs CO"+"2".sub();
+
+}
+</script>
+
+</body>
+</html> 
